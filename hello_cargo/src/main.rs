@@ -25,6 +25,33 @@ fn main(){
     io::stdin()
         .read_line(&mut choice)
         .expect("Failed to read the line");
-        
-    farenheit_to_celsisus(temp, choice);
+    /**
+     * For user input
+     *  */    
+     /**
+      * loop{
+        let mut n = String::new();
+        io::stdin()
+            .read_line(&mut n)
+            .expect("Failure");
+            if n.trim() == "quit" {
+                break;
+            }
+            let n : u32 - match n.trim().parse(){
+                Ok(num) => num,
+                Err(_) => continue,
+            };
+     }
+     then you can do fibonacci of n
+      */
+     
+    //farenheit_to_celsisus(temp, choice);
+   println!("{}",fibonacci(5));
+}
+fn fibonacci(x : i32) -> i32{
+    match x{
+        0 => 1,
+        1 => 1,
+        _ => fibonacci(x-1) + fibonacci(x-2),
+    }
 }
